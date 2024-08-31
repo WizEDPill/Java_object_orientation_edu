@@ -25,5 +25,6 @@ public class CadastroDeLivros {
         outroLivro.setDescricao("Novos recursos");
         outroLivro.setAutor(outroAutor); // Criando a associação entre outro livro e outro autor
         outroLivro.mostrarDetalhes();
+        //so irei manter o seter se for realmente necessario.
     }        
 }

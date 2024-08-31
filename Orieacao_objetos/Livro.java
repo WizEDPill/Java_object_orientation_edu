@@ -2,12 +2,13 @@ package Orieacao_objetos;
 
 
 public class Livro {
-    private double valor; // deixei o valor como privado da classe livro
+    private double valor; // deixei o valor como protect para seu usado, pois sera um meio termo entre private e public vai ser visivel a classes filhas
     private String nome; 
     private String descricao;
-    private Autor autor; // uma classe pode ter outra classe como atributo -> chama-se COMPOSIÇÃO
+    public Autor autor; // uma classe pode ter outra classe como atributo -> chama-se COMPOSIÇÃO
         //aqui eu crio de forma menos poluida um metodo para mostrar menssagem de cada livro com suas caracteristicas, sem ter que ficar repetindo em cada objeto
     //DEMAIS METODOS OMITIDOS 
+    private boolean impresso;
     public double getValor(){
         return valor;
     }
@@ -34,31 +35,45 @@ public class Livro {
     }
     public Livro(Autor autor){ // ficou com a resposnsabilidade do metodo setAutor
         this.autor=autor;
+        this.impresso=true;
     }
     public Livro(){
         //seters, getters e outros metodos
     }
+    void mostrarDetalhes(){
+        System.out.println("detalhes do Livro: "+ nome);
+        System.out.println("Nome: "+nome);
+        System.out.println("Valor: " +valor);
+        System.out.println("Descricao: "+descricao);
+        //if (this.temAutor()) { // Verifica se o autor foi associado antes de tentar acessar seus detalhes (vai verificar se tem autor ne nao vair terornar nada)
+        autor.mostrarDetalhes();
+            
+        System.out.println("-----------------------------");
+            }
+        void adicionarValor(double valor){
+            this.valor=valor;
+        }
+        double retornarValor(){
+            return this.valor;
+        }
+        public boolean aplicaDescontoDe(double porcentagem) {
+            if (porcentagem > 0.3) {
+                return false;
+            } else if (!this.impresso && porcentagem > 0.15) {
+                return false;
+            }
+            this.valor -= this.valor * porcentagem;
+            return true;
+        }
+    }
+
+    
     
 
 
-    void mostrarDetalhes(){
-    System.out.println("detalhes do Livro: "+ nome);
-    System.out.println("Nome: "+nome);
-    System.out.println("Valor: " +valor);
-    System.out.println("Descricao: "+descricao);
-    //if (this.temAutor()) { // Verifica se o autor foi associado antes de tentar acessar seus detalhes (vai verificar se tem autor ne nao vair terornar nada)
-    autor.mostrarDetalhes();
-        
-    System.out.println("-----------------------------");
-        }
-    void adicionarValor(double valor){
-        this.valor=valor;
-    }
-    double retornarValor(){
-        return this.valor;
-    }
+    
 
-}
+
 
         //ATE PAGINA 55 DO LIVRO
 

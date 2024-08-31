@@ -4,6 +4,9 @@ public class Autor {
     String nome;
     String email;
     String cpf;
+    public Autor() {// Construtor vazio para permitir a criação de objetos sem argumentos no caso para conseguir preencher os dados em cadastroLivros tenho que deixar essa caixa vasia
+        //TODO Auto-generated constructor stub
+    }
     //metodos 
     public String getNome(){
         return nome;

@@ -1,7 +1,7 @@
 package Orieacao_objetos;
 
 
-public class Livro {
+public abstract class Livro implements Produto { // por ser uma class abstract ela so serve para heranca e polimorfismo
     private double valor; // deixei o valor como protect para seu usado, pois sera um meio termo entre private e public vai ser visivel a classes filhas
     private String nome; 
     private String descricao;
@@ -40,6 +40,7 @@ public class Livro {
     public Livro(){
         //seters, getters e outros metodos
     }
+    public abstract boolean aplicaDescontoDe(double procentagem);
     void mostrarDetalhes(){
         System.out.println("detalhes do Livro: "+ nome);
         System.out.println("Nome: "+nome);
@@ -56,16 +57,15 @@ public class Livro {
         double retornarValor(){
             return this.valor;
         }
-        public boolean aplicaDescontoDe(double porcentagem) {
-            if (porcentagem > 0.3) {
-                return false;
-            } else if (!this.impresso && porcentagem > 0.15) {
-                return false;
-            }
-            this.valor -= this.valor * porcentagem;
-            return true;
+        public boolean isImpresso() {
+            return impresso;
         }
-    }
+        public void setImpresso(boolean impresso) {
+            this.impresso = impresso;
+        }
+       
+        
+}
 
     
     

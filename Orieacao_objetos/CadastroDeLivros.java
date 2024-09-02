@@ -7,7 +7,7 @@ public class CadastroDeLivros {
         autor.setEmail("Edu@gmail.com");
         autor.setCpf("001.234.543.11");
         
-        Livro livro = new Livro(); // Criando um objeto a partir da classe Livro
+        Livro livro = new LivroFisico(autor); // Criando um objeto a partir da classe Livro
         livro.setNome("Estudo de Java");
         livro.setValor(20.50); // Usando método set para atribuir o valor
         livro.setDescricao("Aprenda Java");
@@ -19,7 +19,7 @@ public class CadastroDeLivros {
         outroAutor.setEmail("anfer@gmail.com");
         outroAutor.setCpf("100.223.455.22");
         
-        Livro outroLivro = new Livro();
+        Livro outroLivro = new Ebook(outroAutor);
         outroLivro.setNome("Estude Python");
         outroLivro.setValor(23.40); // Usando método set para atribuir o valor
         outroLivro.setDescricao("Novos recursos");

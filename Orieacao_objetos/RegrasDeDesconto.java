@@ -3,8 +3,11 @@ public class RegrasDeDesconto{
     public static void main(String[] args) {
         Autor autor= new Autor();
         autor.setNome("Eduard");
-        Livro livro= new Livro(autor);
+        LivroFisico livro= new LivroFisico(autor);
         livro.setValor(59.90);
+        
+        Livro livrinho= new MiniLivro(autor);
+        livrinho.setValor(10.50);
 
         if(!livro.aplicaDescontoDe(0.3)){
             System.out.println("Desconto no livro nao pode ser maior do que 30%");

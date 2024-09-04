@@ -1,10 +1,11 @@
 package Orieacao_objetos.br.com.educoder.Teste;
 import Orieacao_objetos.br.com.educoder.Produtos.LivroFisico;
-import Orieacao_objetos.br.com.educoder.Produtos.Produto;
+//import Orieacao_objetos.br.com.educoder.Produtos.Produto;
 import Orieacao_objetos.br.com.educoder.Produtos.Ebook;
 //import Orieacao_objetos.br.com.educoder.Teste.CarrinhoDeCompras;
 import Orieacao_objetos.br.com.educoder.livraria.Autor;
-import Orieacao_objetos.br.com.educoder.Teste.CarrinhoDeCompras;
+//import Orieacao_objetos.br.com.educoder.Teste.CarrinhoDeCompras;
+
 
 public class RegistroDeVendas {
     public static void main(String[] args) {

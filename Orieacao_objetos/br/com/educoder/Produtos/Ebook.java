@@ -1,6 +1,7 @@
-package Orieacao_objetos;
+package Orieacao_objetos.br.com.educoder.Produtos;
+import Orieacao_objetos.br.com.educoder.livraria.Autor;
 
-public class Ebook extends Livro {
+public class Ebook extends Livro implements Promocional {
     // ele herda extends metodos e atributos de livro mas apresenta somente uma coisa difente que é o waterMark
     private String waterMark;
     

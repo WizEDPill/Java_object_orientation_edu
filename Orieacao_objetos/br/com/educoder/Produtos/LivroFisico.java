@@ -1,6 +1,7 @@
-package Orieacao_objetos;
+package Orieacao_objetos.br.com.educoder.Produtos;
+import Orieacao_objetos.br.com.educoder.livraria.Autor;
 // aqui eu criei uma regra diferente pra livro fisico, pois ele apresenta taxa de impressao. 
-public class LivroFisico extends Livro{ // como extende de Livro a classe LivroFisico vai herdar os atributos do Livro
+public class LivroFisico extends Livro implements Promocional{ // como extende de Livro a classe LivroFisico vai herdar os atributos do Livro
     public LivroFisico(Autor autor){
             super(autor);
         }

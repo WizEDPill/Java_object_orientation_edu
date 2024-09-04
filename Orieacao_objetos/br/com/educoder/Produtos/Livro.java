@@ -1,4 +1,5 @@
-package Orieacao_objetos;
+package Orieacao_objetos.br.com.educoder.Produtos;
+import Orieacao_objetos.br.com.educoder.livraria.Autor;
 
 
 public abstract class Livro implements Produto { // por ser uma class abstract ela so serve para heranca e polimorfismo
@@ -41,7 +42,7 @@ public abstract class Livro implements Produto { // por ser uma class abstract e
         //seters, getters e outros metodos
     }
     public abstract boolean aplicaDescontoDe(double procentagem);
-    void mostrarDetalhes(){
+    public void mostrarDetalhes(){
         System.out.println("detalhes do Livro: "+ nome);
         System.out.println("Nome: "+nome);
         System.out.println("Valor: " +valor);

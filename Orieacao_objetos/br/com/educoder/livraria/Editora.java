@@ -1,4 +1,4 @@
-package Orieacao_objetos;
+package Orieacao_objetos.br.com.educoder.livraria;
 
 public class Editora {
     private String nomeFantasia;

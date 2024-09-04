@@ -1,4 +1,9 @@
-package Orieacao_objetos;
+package Orieacao_objetos.br.com.educoder.Teste;
+import Orieacao_objetos.br.com.educoder.livraria.Autor;
+import Orieacao_objetos.br.com.educoder.Produtos.LivroFisico;
+import Orieacao_objetos.br.com.educoder.Produtos.Ebook;
+import Orieacao_objetos.br.com.educoder.Produtos.Livro;
+
 
 public class CadastroDeLivros {
     public static void main(String[] args) {

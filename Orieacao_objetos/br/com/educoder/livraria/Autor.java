@@ -1,4 +1,4 @@
-package Orieacao_objetos;
+package Orieacao_objetos.br.com.educoder.livraria;
 
 public class Autor {
     String nome;
@@ -26,10 +26,11 @@ public class Autor {
     public void setCpf(String cpf){
         this.cpf=cpf;
     }
-    void mostrarDetalhes(){
+    public void mostrarDetalhes(){
     System.out.println("Autor do livro: ");
     System.out.println("nome: " +nome);
     System.out.println("Email: " +email);
     System.out.println("CPF"+ cpf);
+    //deixei public para todos acessarem
     }
 }

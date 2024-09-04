@@ -1,6 +1,7 @@
-package Orieacao_objetos;
+package Orieacao_objetos.br.com.educoder.Produtos;
+import Orieacao_objetos.br.com.educoder.livraria.Editora;
 
-public class Revista implements Produto {
+public class Revista implements Produto,Promocional {
     private String nome;
     private String descricao;
     private double valor;

@@ -1,4 +1,4 @@
-package Inicio_;
+package Inicio;
 import java.util.Scanner; 
 public class ExemploLeituraDados {
     public static void main(String[] args) {

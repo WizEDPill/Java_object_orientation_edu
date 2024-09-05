@@ -1,4 +1,4 @@
-package Orieacao_objetos.br.com.educoder.Teste;
+//package Orieacao_objetos.br.com.educoder.Teste;
 import Orieacao_objetos.br.com.educoder.livraria.Autor;
 import Orieacao_objetos.br.com.educoder.Produtos.LivroFisico;
 import Orieacao_objetos.br.com.educoder.Produtos.Ebook;
@@ -11,6 +11,7 @@ public class CadastroDeLivros {
         autor.setNome("Eduardo And");
         autor.setEmail("Edu@gmail.com");
         autor.setCpf("001.234.543.11");
+       
         
         Livro livro = new LivroFisico(autor); // Criando um objeto a partir da classe Livro
         livro.setNome("Estudo de Java");
@@ -31,5 +32,10 @@ public class CadastroDeLivros {
         outroLivro.setAutor(outroAutor); // Criando a associação entre outro livro e outro autor
         outroLivro.mostrarDetalhes();
         //so irei manter o seter se for realmente necessario.
+        if(autor.equals(outroAutor)){
+            System.out.println("Igual");
+        } else{
+            System.out.println("Diferente");
+        }
     }        
 }

@@ -23,6 +23,8 @@ public class Ebook extends Livro implements Promocional {
         double desconto= this.getValor()*porcentagem;// to pegando o valor ja recebido e fazendo a operação
         this.setValor(this.getValor() - desconto); // seto o novo valor que é o valor antigo getValor- o desconto feito ali encima) 
         return true; 
+       
     }
+    
 
 }

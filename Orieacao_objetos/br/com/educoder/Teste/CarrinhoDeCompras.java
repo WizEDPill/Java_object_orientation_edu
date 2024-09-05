@@ -1,4 +1,4 @@
-package Orieacao_objetos.br.com.educoder.Teste;
+
 import Orieacao_objetos.br.com.educoder.Produtos.Produto;
 //import Orieacao_objetos.br.com.educoder.Produtos.Livro;
 //import Orieacao_objetos.br.com.educoder.Produtos.Revista;
@@ -26,18 +26,12 @@ public class CarrinhoDeCompras {
             System.out.println("Carrinho cheio! Não é possível adicionar mais produtos.");
         }
     }
-
-    public Produto[] getProdutos() {
-        for (int i = 0; i < produtos.length; i++) { // Corrige o loop
-            Produto produto = produtos[i];
-            if (produto != null) {
-                System.out.println(produto.getValor());
-            }
-        }
-        return produtos; // Adiciona o retorno dos produtos
-    }
     //metodo para receber o total 
     public double getTotal(){
         return this.total;
+    }
+    public Produto[] getProdutos() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getProdutos'");
     }
 }

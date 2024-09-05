@@ -1,5 +1,6 @@
 package Orieacao_objetos.br.com.educoder.Produtos;
 import Orieacao_objetos.br.com.educoder.livraria.Autor;
+import Orieacao_objetos.br.com.educoder.livraria.AutorNuloException;
 
 
 public abstract class Livro implements Produto { // por ser uma class abstract ela so serve para heranca e polimorfismo
@@ -35,6 +36,11 @@ public abstract class Livro implements Produto { // por ser uma class abstract e
         this.autor= autor;
     }
     public Livro(Autor autor){ // ficou com a resposnsabilidade do metodo setAutor
+        if(autor ==null){
+            throw new AutorNuloException(
+                "O Autor do livro nao pode ser nulo"
+            );
+        }
         this.autor=autor;
         this.impresso=true;
     }

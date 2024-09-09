@@ -1,5 +1,8 @@
 
 import Orieacao_objetos.br.com.educoder.Produtos.Produto;
+import java.util.ArrayList;
+import java.util.List;
+
 //import Orieacao_objetos.br.com.educoder.Produtos.Livro;
 //import Orieacao_objetos.br.com.educoder.Produtos.Revista;
 /*public class CarrinhoDeCompras {
@@ -12,11 +15,30 @@ import Orieacao_objetos.br.com.educoder.Produtos.Produto;
 }*/
 //Polimorfismo ->
 public class CarrinhoDeCompras {
-    protected double total;
-    private Produto[] produtos = new Produto[10];
-    private int indice = 0; // Variável para controlar a posição livre no array
+    private double total; 
+    private List<Produto> produtos; 
+    public CarrinhoDeCompras(){
+        this.produtos=new ArrayList<Produto>();
+    }
+    public void adiciona(Produto produto){
+        this.produtos.add(produto);
+    }
+    public void remove(int posicao){
+        this.produtos.remove(posicao);
+    }
+    public double getTotal(){
+        return total;
+    }
+    public List<Produto> getProdutos(){
+        return produtos;
+    }
+    
+}
 
-    public void adiciona(Produto produto) {
+//https://prnt.sc/l3p2wVnA2VY4 a observação que temos a interface List e algumas de suas implementacoes. 
+
+/*
+  public void adiciona(Produto produto) {
         if (indice < produtos.length) {
             System.out.println("Adicionando: " + produto);
             this.produtos[indice] = produto; // Adiciona o produto na próxima posição livre
@@ -35,3 +57,4 @@ public class CarrinhoDeCompras {
         throw new UnsupportedOperationException("Unimplemented method 'getProdutos'");
     }
 }
+ */

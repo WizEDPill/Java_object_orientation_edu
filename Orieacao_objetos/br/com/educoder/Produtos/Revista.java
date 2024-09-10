@@ -38,4 +38,8 @@ public class Revista implements Produto,Promocional {
         setValor(getValor() - desconto);
         return true;
     }
+    @Override
+    public int compareTo(Produto outro){
+       return (int) (this.getValor()- outro.getValor()); // retornando tipo int um menos o outro
+    }
 }

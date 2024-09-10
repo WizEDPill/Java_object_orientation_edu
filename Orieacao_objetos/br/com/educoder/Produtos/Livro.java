@@ -10,6 +10,20 @@ public abstract class Livro implements Produto { // por ser uma class abstract e
     public Autor autor; // uma classe pode ter outra classe como atributo -> chama-se COMPOSIÇÃO
         //aqui eu crio de forma menos poluida um metodo para mostrar menssagem de cada livro com suas caracteristicas, sem ter que ficar repetindo em cada objeto
     //DEMAIS METODOS OMITIDOS 
+    
+    @Override
+    public int compareTo(Produto outro){
+        if(this.getValor()< outro.getValor()){
+            return -1; 
+        }
+        if(this.getValor()> outro.getValor()){
+            return 1; 
+        }
+        return 0; 
+    
+    }
+   
+
     private boolean impresso;
     public double getValor(){
         return valor;
@@ -70,6 +84,7 @@ public abstract class Livro implements Produto { // por ser uma class abstract e
         public void setImpresso(boolean impresso) {
             this.impresso = impresso;
         }
+        
        
         
 }

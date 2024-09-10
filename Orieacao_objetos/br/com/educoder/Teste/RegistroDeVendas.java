@@ -29,10 +29,7 @@ public class RegistroDeVendas {
         }
 
         List<Produto> produtos = carrinho.getProdutos();
-        for (Produto produto : produtos) { // Corrige o loop
-            if (produto != null) {
-                System.out.println(produto);
-            }
-        }
+        produtos.forEach(l->System.out.println(produtos)); // usei o lambda + foorEach para fazer essa operacao e deixei ela bem mais simples. 
+        
     }
 }

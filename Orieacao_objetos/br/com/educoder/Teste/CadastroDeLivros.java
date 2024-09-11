@@ -22,7 +22,7 @@ public class CadastroDeLivros {
         
         Autor outroAutor = new Autor();
         outroAutor.setNome("Edi");
-        outroAutor.setEmail("anfer@gmail.com");
+        outroAutor.setEmail("sub@gmail.com");
         outroAutor.setCpf("100.223.455.22");
         
         Livro outroLivro = new Ebook(outroAutor);
